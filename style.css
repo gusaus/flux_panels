@@ -1143,11 +1143,7 @@ body.node-type-news .content {
   margin:0 auto;
   
 }
-body.node-type-news .field-name-body {
-  /*font-family:georgia;*/
-  font-size:1.25em;
-  color:#333;
-}
+
 
 /**
  * Event Styles
@@ -1185,19 +1181,6 @@ body.node-type-news .field-name-body {
 
 }
 
-body.node-type-event .field-name-body {
-  color:#666;
-}
-
-/* 
-body.node-type-event .field-type-datetime {
-  font-size: 1.3em;
-  color:#0C0C0C;
-  line-height: 1;
-  margin-top: 1em;
-  margin-bottom:1em;
-}
- */
 body.node-type-event .field-name-field-links {
 
 }
@@ -1920,7 +1903,7 @@ body {
 
 
 /**
- fucking w/ backgrounds
+ experiments w/ backgrounds
  */
 
 #container {
