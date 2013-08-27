@@ -58,3 +58,11 @@ core = "7.x"
 project = "flux"
 datestamp = "1363870712"
 
+
+
+; Information added by drush on 2013-08-12
+version = "7.x-1.x-panels-dev"
+core = "7.x"
+project = "flux_panels"
+datestamp = "1376349345"
+

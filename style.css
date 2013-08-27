@@ -142,7 +142,7 @@ dd {  margin-left: 1.5em; }
 hr {  background: #DDD;  border: none;  clear: both;  float: none;  height: 1px;  margin: 0 0 1.4375em;  width: 100%; }
 fieldset {  border: 1px solid #DDD;  margin: 0 0 1.4375em;  padding: 1.5em;}
 fieldset legend {  }
-table {  margin-bottom: 1.5em;  width: 100%; }
+table {  /* margin-bottom: 1.5em;  */ width: 100%; }
 th, tr, td {  vertical-align: middle; }
 th { padding-right: 1em; }
 .sticky-header th, .sticky-table th {   padding-right: 1em;  text-align: left; }
@@ -808,6 +808,7 @@ div.error, div.warning, div.messages, div.status {
   height:280px;
   width:225px; /* artwork_medium imagecache*/
 }
+/* 
 .view-releases .views-row .views-field-field-artwork img,
 .view-albums .views-row .views-field-field-artwork img,
 .view-tracks .views-row .views-field-field-artwork img {
@@ -818,6 +819,7 @@ div.error, div.warning, div.messages, div.status {
   margin-right: 10px;
   padding: 1px;  
 }
+ */
 
 
 .view-releases .views-row .views-field-field-artwork img:hover,
@@ -1225,7 +1227,7 @@ body.node-type-event .field-name-field-links a:hover {
 .view-photosets .views-field-field-photos img,
 .view-video .views-field-field-video img
  {
-  border:solid 5px #000;
+/*   border:solid 5px #000; */
   display:inline;
   display:inline-block;
   margin-right:2px;
@@ -1722,37 +1724,19 @@ body.maintenance-page #page-title {
     margin-bottom: 5px;
 }
 
-
+/* 
 .panel-pane .pane-content {
     padding-bottom: 2px;
 }
 
-.panel-pane .views-row {
-    padding-bottom: 5px;
-}
 
-
-
-/**
- * messing around w/ colors
- */
-
-/* 
-body {
-  background: #EEE; url(images/noise.png);*/
+.panel-pane .pane-content .views-row {
+    margin-bottom: 5px;
 }
  */
-
-
-.container-inner {
-  background-color:#ffffff;
-  opacity:0.9;
-  filter:alpha(opacity=90); For IE8 and earlier
-}
-
  
  /**
- * 10.FOOTER
+ * Changes to footer
  */
 
 #footer {
@@ -1760,97 +1744,30 @@ body {
 }
 
 
- /**
- * Newsletter - hiding archive link and feed icon for newsletter signup
+/**
+ * Widgets
  */
 
-#newsletter .issues-link, .feed-icon {
-  display:none;
-}
-
-#newsletter .pane-content {
+.widgets {
     padding: 5px;
     background: #EEE;
     border: 1px solid #FFFFFF;
     border-radius: 6px 6px 6px 6px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
 }
-
- /**
- * News sidebar
- */
-
-#news .pane-content {
-    padding: 5px;
-    background: #EEE;
-    border: 1px solid #FFFFFF;
-    border-radius: 6px 6px 6px 6px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-}
-
-#news .views-row-1 {
-    font: inherit;
-}
-
- /**
- * Events sidebar
- */
-
-#events .pane-content {
-    padding: 5px;
-    background: #EEE;
-    border: 1px solid #FFFFFF;
-    border-radius: 6px 6px 6px 6px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-}
-
-
- /**
- * tweaks to flexslider
- */
-
-.flexslider {
-    background: none repeat scroll 0 0 #EEEEEE;
-    border: 2px solid #FFFFFF;
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-    margin: 0 0 60px;
-    position: relative;
-}
-
-#featured .flexslider .slides img {
-    padding: 0 1em;
-}
-
-#featured .flex-nav-container {
-    margin-bottom: 0;
-}
-
- /**
- * tweak to mediafront player
- */
-
-
-.minplayer-default-volume a {
-    margin-bottom: 0;
-}
-
-
 
 /**
- * Video Styles
+ * Discography widgets
  */
 
-
-.view-video .field-multiple-table th.field-label, td, th {
-    padding: 0.0em 0em;
+#discography .table {
+    margin: 0;
 }
-
 
 /**
  * Follow menu
  */
-
 
 #follow .pane-content {
     padding: 5px;
@@ -1896,9 +1813,94 @@ body {
     background-image: url("./images/icon_twitter.png");
 }
 
+/**
+ * Mediafront player
+ */
+
+.minplayer-default-volume a {
+    margin-bottom: 0;
+}
+
+.view-pushtape_player_track_views .panel-pane h2, .panel-pane a {
+    margin-bottom: 1px;
+}
+
+.view-pushtape_player_track_views ul.graphic li {
+    margin-bottom: 0px;
+}
+
+ /**
+ * Fixes padding issue w/ mediafront but might also mess w/ panopoly widgets
+ */
+.ui-widget-header {
+    padding: 0;
+    min-height: 0px;
+}
+
+ /**
+ * News widgets
+ */
+
+#news .views-row-1 {
+    font: inherit;
+}
+
 .view-news .views-row h2{
   margin-bottom:.25em;
   font-size:1.5em;
+}
+
+ /**
+ * News slideshow (flexslider)
+ */
+
+.flexslider {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 0 60px;
+    position: relative;
+}
+
+#featured .flexslider .slides img {
+    padding: 0 1em;
+}
+
+#featured .flex-nav-container {
+    margin-bottom: 0;
+}
+
+ /**
+ * Newsletter - hiding archive link and feed icon for newsletter signup
+ */
+
+#newsletter .issues-link, .feed-icon {
+  display:none;
+}
+
+#newsletter .pane-content {
+    padding: 5px;
+    background: #EEE;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/**
+ * Photos widgets
+ */
+
+.view-photosets .views-row  {
+  margin-bottom:0px;
+}
+
+/**
+ * Video Styles
+ */
+
+.view-video .field-multiple-table th.field-label, td, th {
+    padding: 0.0em 0em;
 }
 
 
@@ -1910,6 +1912,72 @@ body {
   /* Allow for setting background color opacity, allows bg to show through */
   background: none repeat scroll 0 0 rgba(202, 221, 226, 0.75);
 }
+
+/**
+ * messing around w/ colors
+ */
+
+/* 
+.container-inner {
+  background-color:#ffffff;
+  opacity:0.9;
+  filter:alpha(opacity=90); For IE8 and earlier
+}
+ */
+ 
+ /**
+ * Image styling 
+ */
+img.panopoly-image-full {
+  max-width: 100%;
+  width: 100% !important;
+  height: auto;
+  margin-bottom: .5em;
+}
+
+img.panopoly-image-half {
+  max-width: 50%;
+  width: 50%;
+  height: auto;
+  float: left;
+  margin-right: .75em;
+  margin-bottom: .5em;
+  margin-top: .5em;
+}
+
+img.panopoly-image-quarter {
+  max-width: 25%;
+  width: 25%;
+  height: auto;
+  float: left;
+  margin-right: .5em;
+  margin-bottom: .25em;
+  margin-top: .25em;
+}
+
+img.panopoly-image-featured {
+  max-width: 100%;
+  height: auto;
+}
+
+img.panopoly-image-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+img.panopoly-image-square {
+  max-width: 100%;
+  height: auto;
+}
+
+img.panopoly-image-video {
+  max-width: 100%;
+  width: 100% !important;
+  height: auto;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
 
 
 
