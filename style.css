@@ -793,66 +793,6 @@ div.error, div.warning, div.messages, div.status {
 }
 
 
-#main .view-releases .views-row,
-#main .view-albums .views-row,
-#main .view-tracks .views-row
- {
-  /* Alternate: inline-block instead of float to accomodate variable heights. IE fix: zoom:1; *display: inline; _height: 300px; 
-  display:inline-block; 
-  vertical-align:top;
-  */
-  float:left;
-  margin-right:10px;
-  padding-bottom:1%;
-  margin-bottom:0;
-  height:280px;
-  width:225px; /* artwork_medium imagecache*/
-}
-/* 
-.view-releases .views-row .views-field-field-artwork img,
-.view-albums .views-row .views-field-field-artwork img,
-.view-tracks .views-row .views-field-field-artwork img {
-  display:block;
-  border: 1px solid #949494;
-  float: left;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  padding: 1px;  
-}
- */
-
-
-.view-releases .views-row .views-field-field-artwork img:hover,
-.view-albums .views-row .views-field-field-artwork img:hover,
-.view-tracks .views-row .views-field-field-artwork img:hover {
-  border-color:#BFBFBF;
-  display:block;
-}
-
-.view-releases .views-row .views-field-field-artwork a,
-.view-albums .views-row .views-field-field-artwork a,
-.view-tracks .views-row .views-field-field-artwork a {
-  background:000;
-  display:block;
-}
-
-.view-releases .views-row .views-field-title a,
-.view-albums .views-row .views-field-title a,
-.view-tracks .views-row .views-field-title a {
-  font-family:"Arvo", Georgia, serif;
-  font-style:italic;
-  display:block;
-  padding:.5em 1em;
-  padding-left:0px;
-}
-
-.sidebar .view-releases .views-row,
-.sidebar .view-albums .views-row,
-.sidebar .view-tracks .views-row {
-  margin-bottom:1%;
-}
-
-
 .view-events .view-empty,
 .view-news .view-empty,
 .view-photosets .view-empty,
@@ -867,25 +807,6 @@ div.error, div.warning, div.messages, div.status {
   padding-left:2em;
   height:auto;
   border-radius:5px;   
-}
-
-body.node-type-album .field ,
-body.node-type-track .field {
- margin-bottom:.5em;
-}
-
-body.node-type-album .field-label,
-body.node-type-track .field-label {
-  margin-bottom:.25em;
-}
-
-
-
-body.node-type-album .field-name-field-artwork,
-body.node-type-track .field-name-field-artwork{
-  float:right;
-  margin:0 1% 2% 3%;
-  border:none;
 }
 
 body.node-type-album.page-node-edit .field-name-field-artwork,
@@ -909,11 +830,13 @@ body.node-type-track .field-name-field-links .field-item a {
   margin-bottom:.5em;
   font-size:.9em;
 }
+/* 
 body.node-type-album .field-name-field-links .field-item a:hover,
 body.node-type-track .field-name-field-links .field-item a:hover {
   border-color:#E0E0E0;
   background:#F3F3F3;
 }
+ */
 
 
 
@@ -1039,59 +962,6 @@ body.logged-in #block-menu-menu-pushtape ul.menu {
 
 
 /**
- * Pushtape Dashboard Styles
- */
-.view-dashboard .view-header {
-  width:100%;
-  overflow:auto;
-}
-.view-dashboard div.views-field-created,
-.view-dashboard .views-field-type {
-  font-family:Georgia, serif;
-  text-transform:lowercase;
-  color:#999;
-  font-style:italic;
-}
-
-th.views-field-created {
-  color:#999;
-}
-td.views-field-created {
-  font-family:Georgia, serif;
-  font-size:.9em;
-}
-
-.view-dashboard .views-row {
-  padding:10px 20px;
-  overflow:auto;
-  border-bottom:solid 1px #DDD;
-  background:#FcFCfc;
-}
-.view-dashboard .views-row:hover {
-  background:#F6F6F6;
-}
-
-.view-dashboard .views-row-1 {
-  font-size:2em;
-  border-bottom:solid 5px #CCC;
-  background:transparent;
-}
-
-
-.view-dashboard .views-row-last {
-  border:none;
-}
-.view-dashboard .views-row-even {
-  
-}
-
-.view-dashboard .views-row img {
-  border: 1px solid #949494;
-  padding: 1px;
-  float:right;
-}
-
-/**
  * News Styles
  */
 .view-news .views-row {
@@ -1127,10 +997,12 @@ td.views-field-created {
   background:#F9F9F9;
 }
 
+/* 
 .view-news .views-row-1 {
   font-size:1.25em;
   border-bottom:solid #F2f2f2 10px;
 }
+ */
 
 
 ul.inline li.node-readmore {
@@ -1202,51 +1074,27 @@ body.node-type-event .field-name-field-links a:hover {
   background:#F3F3F3;
 } 
 
+ 
 
-/**
- * Photoset and Video Styles
- */
-.view-photosets .views-row,
-.view-video .views-row  {
-  margin-bottom:20px;
-}
-.view-photosets .views-field-title, 
-.view-video .views-field-title {
-  padding:7px 5px;
-/*   background:#F3f3f3 url(images/noise.png); */
-  font-size:1.2em;
-}
-.view-photosets .views-field-field-photos, 
-.view-video .views-field-field-video
- {
-/*   background:#F9f9f9 url(images/noise.png);  */
-  padding:5px;
-  border:solid #F3f3f3f 5px;
-  border-width:0 3px 3px 3px;
-}
-.view-photosets .views-field-field-photos img,
-.view-video .views-field-field-video img
- {
-/*   border:solid 5px #000; */
-  display:inline;
-  display:inline-block;
-  margin-right:2px;
-  margin-bottom:2px;
-}
-
-body.page-node .field-name-field-photos .field-name-field-video .field-item img {
-  float:left;
-  margin-right:5px;
-  margin-bottom:5px;
-  border:solid 5px #000;
-}
 
 /* Individual Track Audio & Player Styles*/
+
+.views-field-field-tracklist ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.field-name-field-audio ul li,
+.field-name-field-audio ol li {
+  margin: 0;
+  padding: 0;
+}
+
 .node-type-track .field-name-field-audio {
   display:inline-block;
-  padding-bottom:1.25em;
-  padding-left:1em;
-  text-align:right;
+  padding-top:1em;
+  min-width: 80%;
 }
 
 .sm2-inline-list .ui360-vis .sm2-360ui,
@@ -1270,6 +1118,22 @@ body.page-node .field-name-field-photos .field-name-field-video .field-item img 
 .sm2-inline-list .ui360-vis:hover a.sm2_link,
 .ui360-vis:hover a.sm2_link {
   background-color:transparent;
+}
+
+ul.graphic li a,
+ul.graphic li a.sm2_link {
+ /* assume all items will be sounds rather than wait for onload etc. in this example.. may differ for your uses. */
+ display:inline-block;
+ padding-left:22px;
+ min-height:16px;
+ vertical-align: middle;
+ background-color:#336699;
+ border-radius:3px;
+ padding:3px 3px 3px 25px;
+ min-width:85%;
+ text-decoration:none;
+ font-weight:normal;
+ color:#f6f9ff;
 }
 
 
@@ -1653,23 +1517,27 @@ body.maintenance-page #page-title {
     clear:both;
   }
 
+/* 
   #main .view-releases .views-row,
   #main .view-albums .views-row,
   #main .view-tracks .views-row {
     margin-right:15px;
   }
+ */
   .sidebar .view-releases .views-row,
   .sidebar .view-albums .views-row,
   .sidebar .view-tracks .views-row {
      /*Alternate method: inline-block to deal with variable heights. IE fix: zoom:1; *display: inline; _height: 120px;  
      display:inline-block; 
      vertical-align:top;
-     */   
+     */  
+     /* 
      margin-right:1.4%;
      margin-bottom:1.6%;
      height:120px;
      float:left;
      width:100px; /* artwork_small imagecache width*/
+    */ 
   }
   ul.pager li a,
   ul.pager li.pager-current,
@@ -1724,16 +1592,7 @@ body.maintenance-page #page-title {
     margin-bottom: 5px;
 }
 
-/* 
-.panel-pane .pane-content {
-    padding-bottom: 2px;
-}
 
-
-.panel-pane .pane-content .views-row {
-    margin-bottom: 5px;
-}
- */
  
  /**
  * Changes to footer
@@ -1755,14 +1614,6 @@ body.maintenance-page #page-title {
     border-radius: 6px 6px 6px 6px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
-}
-
-/**
- * Discography widgets
- */
-
-#discography .table {
-    margin: 0;
 }
 
 /**
@@ -1841,14 +1692,6 @@ body.maintenance-page #page-title {
  * News widgets
  */
 
-#news .views-row-1 {
-    font: inherit;
-}
-
-.view-news .views-row h2{
-  margin-bottom:.25em;
-  font-size:1.5em;
-}
 
  /**
  * News slideshow (flexslider)
@@ -1887,21 +1730,7 @@ body.maintenance-page #page-title {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-/**
- * Photos widgets
- */
 
-.view-photosets .views-row  {
-  margin-bottom:0px;
-}
-
-/**
- * Video Styles
- */
-
-.view-video .field-multiple-table th.field-label, td, th {
-    padding: 0.0em 0em;
-}
 
 
 /**
@@ -1928,6 +1757,13 @@ body.maintenance-page #page-title {
  /**
  * Image styling 
  */
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+}
+
 img.panopoly-image-full {
   max-width: 100%;
   width: 100% !important;
@@ -1966,7 +1802,14 @@ img.panopoly-image-thumbnail {
 }
 
 img.panopoly-image-square {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto;
+}
+
+img.artwork-small {
   max-width: 100%;
+  width: 100% !important;
   height: auto;
 }
 
@@ -1974,9 +1817,124 @@ img.panopoly-image-video {
   max-width: 100%;
   width: 100% !important;
   height: auto;
-  margin-top: .5em;
-  margin-bottom: .5em;
 }
+
+
+/**
+ * RESPONSIVE GRIDS for Discography, Photos, and Video
+ */
+ 
+/*  SECTIONS
+*/
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  
+* GROUPING  
+*/
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  
+* GRID COLUMN SETUP 
+*/
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+	width: 100%;
+}
+.span_2_of_3 {
+	width: 66.1%;
+}
+.span_1_of_3 {
+	width: 32.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+
+@media only screen and (max-width: 480px) {
+	.span_3_of_3 {
+		width: 100%; 
+	}
+	.span_2_of_3 {
+		width: 100%; 
+	}
+	.span_1_of_3 {
+		width: 100%;
+	}
+}
+
+/*  GRID OF FOUR */
+
+	
+.span_4_of_4 {
+	width: 100%; 
+}
+
+.span_3_of_4 {
+	width: 74.6%; 
+}
+
+.span_2_of_4 {
+	width: 49.2%; 
+}
+
+.span_1_of_4 {
+	width: 23.8%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span_4_of_4 {
+		width: 100%; 
+	}
+	.span_3_of_4 {
+		width: 100%; 
+	}
+	.span_2_of_4 {
+		width: 100%; 
+	}
+	.span_1_of_4 {
+		width: 100%; 
+	}
+}
+
+
 
 
 
